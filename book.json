@@ -1,0 +1,23 @@
+[
+  {
+    "Title": "1984",
+    "Author1": "George Orwell",
+    "Author2": "NA",
+    "Genre": "Sci-Fi",
+    "Main Protagonist": "Winston Smith"
+  },
+  {
+    "Title": "Good Omens",
+    "Author1": "Neil Gaiman",
+    "Author2": "Terry Pratchett",
+    "Genre": "Fantasy",
+    "Main Protagonist": "Crowley"
+  },
+  {
+    "Title": "Ready Player One",
+    "Author1": "Ernest Cline",
+    "Author2": "NA",
+    "Genre": "Sci-Fi",
+    "Main Protagonist": "Wade Watts"
+  }
+]
