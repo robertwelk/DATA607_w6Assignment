@@ -1,0 +1,64 @@
+---
+title: "DATA 607 - Week 7 Assignment"
+author: "Rob Welk"
+date: "March 17, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Objective
+Create a table of favorite books in HTML, XML, and JSON formats and load into R as dataframes  
+
+# Packages used
+```{r, message=FALSE, warning=FALSE}
+library(jsonlite)
+library(tidyverse)
+library(XML)
+```
+
+# GitHub repository
+Contains tables in the requested formats 
+https://github.com/robertwelk/DATA607_w7Assignment
+
+# Load HTML table
+```{r}
+#html loads in as a list
+html <- readHTMLTable('book.html', header=T)
+str(html)
+
+# unlist and combine to get a dataframe
+html <- do.call(rbind, html)
+print(html)
+```
+
+# Load JSON table
+```{r}
+# loads as a dataframe
+json <- fromJSON('book.json') 
+str(json)
+```
+
+# Check that the JSON and HTML tables are the same
+```{r}
+json == html
+```
+
+# Load XML table
+```{r, warning=FALSE}
+# loading an xml is more difficult
+# solution obtained from: 
+#https://stackoverflow.com/questions/17198658/how-to-parse-xml-to-r-data-frame
+xml.load <- xmlTreeParse('book.xml')
+xml <- xmlRoot(xml.load)
+xml <- xmlSApply(xml,function(x) xmlSApply(x, xmlValue))
+xml <- t(xml) %>% as.data.frame() 
+str(xml)
+is.data.frame(xml)
+```
+
+# Check that XML table is the same as HTML table
+```{r}
+xml == html
+```
