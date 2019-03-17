@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <0>
+        <title>1984</title>
+        <author1>George Orwell</author1>
+        <author2>NA</author2>
+        <genre>Sci-Fi</genre>
+        <protagonist>Winston Smith</protagonist>
+    </0>
+    <1>
+        <title>Good Omens</title>
+        <author1>Neil Gaiman</author1>
+        <author2>Terry Pratchett</author2>
+        <genre>Fantasy</genre>
+        <protagonist>Crowley</protagonist>
+    </1>
+    <2>
+        <title>Ready Player One</title>
+        <author1>Ernest Cline</author1>
+        <author2>NA</author2>
+        <genre>Sci-Fi</genre>
+        <protagonist>Wade Watts</protagonist>
+    </2>
+</root>
